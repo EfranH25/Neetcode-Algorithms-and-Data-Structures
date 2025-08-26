@@ -1,0 +1,16 @@
+# difficulty: easy
+# solution: https://neetcode.io/problems/remove-element?list=neetcode150
+# my solution
+from typing import List
+
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        l, r = 0, 0
+        while r < len(nums):
+            if nums[r] != val:
+                nums[l] = nums[r]
+                l += 1
+            r += 1
+
+        return l
